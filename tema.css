@@ -1,0 +1,150 @@
+:root {
+  --bg-primary: #99c0e6;
+  --text-main: #0F172A;
+  --surface-color: #FFFFFF;
+  --border-color: #CBD5E1;
+  --brand-primary: #0284C7;
+  --accent-action: #0EA5E9;
+  --state-danger: #EF4444;
+  --text-secondary: #64748B;
+  --hover-color: #E0F2FE;
+
+  --spacing-xs: 6px;
+  --spacing-sm: 10px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+}
+
+/* DARK MODE OTOMATIS */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0F172A;
+    --text-main: #F8FAFC;
+    --surface-color: #1E293B;
+    --border-color: #334155;
+    --brand-primary: #38BDF8;
+    --accent-action: #38BDF8;
+    --state-danger: #F87171;
+    --text-secondary: #CBD5E1;
+    --hover-color: #334155;
+  }
+}
+
+/* INPUT TEMA */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* TOMBOL TEMA */
+.tombol-tema {
+  display: inline-block;
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tombol-tema:hover {
+  background-color: var(--hover-color);
+  border-color: var(--brand-primary);
+}
+
+/* DARK MODE MANUAL */
+:root:has(#tema:checked) {
+  --bg-primary: #0F172A;
+  --text-main: #F8FAFC;
+  --surface-color: #1E293B;
+  --border-color: #334155;
+  --brand-primary: #38BDF8;
+  --accent-action: #38BDF8;
+  --state-danger: #F87171;
+  --text-secondary: #CBD5E1;
+  --hover-color: #334155;
+}
+
+/* BODY */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* CARD */
+.card,
+.kartu,
+.container {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+/* TOMBOL */
+button,
+.btn,
+.tombol {
+  background-color: var(--brand-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+.tombol:hover {
+  background-color: var(--accent-action);
+}
+
+/* TOMBOL HAPUS */
+.btn-danger,
+.tombol-hapus {
+  background-color: var(--state-danger);
+  color: #FFFFFF;
+}
+
+/* INPUT */
+input,
+select,
+textarea {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+}
+
+/* INPUT FOCUS */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+}
+
+/* LINK */
+a {
+  color: var(--brand-primary);
+}
+
+/* GARIS */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
